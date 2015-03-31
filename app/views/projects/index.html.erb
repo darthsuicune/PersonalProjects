@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Projects</h1>
+
+<table>
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Description</th>
+			<th>Url</th>
+			<th>Source Url</th>
+			<th></th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<% @projects.each do |project| %>
+			<tr>
+			<td><%= project.name %></td>
+			<td><%= project.description %></td>
+			<td><%= link_to project.name, project.url %></td>
+			<td><%= link_to "#{project.name} (Source)", project.source_url %></td>
+			<td><%= link_to 'Show', project %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
+
+<br>

@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+	<strong>Name:</strong>
+	<%= @project.name %>
+</p>
+
+<p>
+	<strong>Description:</strong>
+	<%= @project.description %>
+</p>
+
+<p>
+	<strong>Url:</strong>
+	<%= link_to @project.name, @project.url %>
+</p>
+
+<p>
+	<strong>Source Url:</strong>
+	<%= link_to "#{@project.name} (Source)", @project.source_url %>
+</p>
+<%= link_to 'Back', projects_path %>
